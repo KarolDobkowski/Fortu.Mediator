@@ -1,0 +1,7 @@
+build:
+ stage: build
+ script:
+  - 'dotnet restore'
+  - 'dotnet build'
+  - 'cd tests/Flowem.Mediator.Tests'
+  - 'dotnet test  --no-build'
