@@ -4,7 +4,7 @@ namespace Flowem.Mediator.Core.Interfaces
 {
     public interface IMediator
     {
-        void Dispatch(IMessage message);
-        Task<TResult> Dispatch<TResult>(IMessage<TResult> message);
+        void Send<TMessage>(TMessage message) where TMessage : IMessage;
+        Task<TResult> Dispatch<TMessage, TResult>(TMessage message) where TMessage : IMessage<TResult>;
     }
 }

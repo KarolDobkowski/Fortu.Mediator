@@ -14,19 +14,22 @@ namespace Flowem.Mediator.Core
             _serviceProvider = serviceProvider;
         }
 
-        public void Dispatch(IMessage message)
+        public void Send<TMessage>(TMessage message) 
+            where TMessage : IMessage
         {
-            var handler = ((IMessageHandler<IMessage>) _serviceProvider.GetService(message.GetType()))
-                .ThrowExceptionIfNull("Handler cannot be resolved.");
+            var handlerType = typeof(IMessageHandler<>).MakeGenericType(typeof(TMessage));
+            var handler = ((IMessageHandler<TMessage>)_serviceProvider.GetService(handlerType))
+                .ThrowExceptionIfNull("Handler is not registered.");
             
             Task.Run(() => handler.Handle(message));
         }
 
-        public async Task<TResult> Dispatch<TResult>(IMessage<TResult> message)
+        public async Task<TResult> Dispatch<TMessage, TResult>(TMessage message) 
+            where TMessage : IMessage<TResult>
         {
-            var handler =
-                ((IMessageHandler<IMessage<TResult>, TResult>) _serviceProvider.GetService(message.GetType()))
-                .ThrowExceptionIfNull("Handler cannot be resolved.");
+            var handlerType = typeof(IMessageHandler<,>).MakeGenericType(typeof(TMessage), typeof(TResult));
+            var handler = ((IMessageHandler<TMessage, TResult>)_serviceProvider.GetService(handlerType))
+                .ThrowExceptionIfNull("Handler is not registered.");
             
             return await handler.Handle(message);
         }
