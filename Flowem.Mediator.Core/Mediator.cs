@@ -17,6 +17,8 @@ namespace Flowem.Mediator.Core
         public void Send<TMessage>(TMessage message) 
             where TMessage : IMessage
         {
+            message.ThrowExceptionIfNull("Message cannot be null.");
+
             var handlerType = typeof(IMessageHandler<>).MakeGenericType(typeof(TMessage));
             var handler = ((IMessageHandler<TMessage>)_serviceProvider.GetService(handlerType))
                 .ThrowExceptionIfNull("Handler is not registered.");
@@ -27,6 +29,8 @@ namespace Flowem.Mediator.Core
         public async Task<TResult> Dispatch<TMessage, TResult>(TMessage message) 
             where TMessage : IMessage<TResult>
         {
+            message.ThrowExceptionIfNull("Message cannot be null.");
+
             var handlerType = typeof(IMessageHandler<,>).MakeGenericType(typeof(TMessage), typeof(TResult));
             var handler = ((IMessageHandler<TMessage, TResult>)_serviceProvider.GetService(handlerType))
                 .ThrowExceptionIfNull("Handler is not registered.");
