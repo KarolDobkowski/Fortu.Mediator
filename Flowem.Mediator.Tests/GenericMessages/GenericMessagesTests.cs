@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
-using Flowem.Mediator.Core.Interfaces;
+using Flowem.Mediator.Interfaces;
 using Flowem.Mediator.Tests.Samples;
 using Microsoft.Extensions.DependencyInjection;
 using Xunit;

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Flowem.Mediator.Core.Interfaces;
-
-namespace Flowem.Mediator.Tests.Samples
+﻿namespace Flowem.Mediator.Tests.Samples
 {
     public class GenericMessageWithValueTypeResponse : IMessage<long>
     {

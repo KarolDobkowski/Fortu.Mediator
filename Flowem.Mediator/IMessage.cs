@@ -1,4 +1,4 @@
-namespace Flowem.Mediator.Core.Interfaces
+namespace Flowem.Mediator
 {
     public interface IMessage 
     {

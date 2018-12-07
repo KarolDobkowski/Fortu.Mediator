@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading;
+﻿using System.Threading;
 using System.Threading.Tasks;
-using Flowem.Mediator.Core.Interfaces;
 using Flowem.Mediator.Tests.Samples;
 using Microsoft.Extensions.DependencyInjection;
 using Xunit;
@@ -21,7 +17,7 @@ namespace Flowem.Mediator.Tests.Messages
             services.AddTransient<IMessageHandler<SimpleMessage>, SimpleMessageHandler>();
             var provider = services.BuildServiceProvider();
 
-            _mediator = new Core.Mediator(provider);
+            _mediator = new Mediator(provider);
         }
 
         [Fact]

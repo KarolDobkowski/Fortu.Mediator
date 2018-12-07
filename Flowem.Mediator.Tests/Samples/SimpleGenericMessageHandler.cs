@@ -1,5 +1,4 @@
 ﻿using System.Threading.Tasks;
-using Flowem.Mediator.Core.Interfaces;
 
 namespace Flowem.Mediator.Tests.Samples
 {

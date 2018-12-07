@@ -1,7 +1,6 @@
 using System;
-using Flowem.Mediator.Core.Interfaces;
 
-namespace Flowem.Mediator.Core.Extensions
+namespace Flowem.Mediator.Extensions
 {
     internal static class HandlerExtensions
     {

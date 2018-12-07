@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace Flowem.Mediator.Core.Interfaces
+namespace Flowem.Mediator
 {
     public interface IMessageHandler<in TMessage, TResult>
         where TMessage : IMessage<TResult>

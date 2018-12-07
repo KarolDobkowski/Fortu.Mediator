@@ -1,12 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D9538699-CF5D-4FA0-BEA1-94C6359ED1ED}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{A4BB1DB9-3F6C-42A9-9FD9-387F40F0498E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flowem.Mediator.Core", "Flowem.Mediator.Core\Flowem.Mediator.Core.csproj", "{E85A9A03-DF12-44E7-A417-CB3742C56C16}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flowem.Mediator", "Flowem.Mediator\Flowem.Mediator.csproj", "{E85A9A03-DF12-44E7-A417-CB3742C56C16}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flowem.Mediator.Tests", "Flowem.Mediator.Tests\Flowem.Mediator.Tests.csproj", "{4E2D692D-CCBB-4D89-85F3-7BA8BB48F5A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flowem.Mediator.Tests", "Flowem.Mediator.Tests\Flowem.Mediator.Tests.csproj", "{4E2D692D-CCBB-4D89-85F3-7BA8BB48F5A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,8 +26,14 @@ Global
 		{4E2D692D-CCBB-4D89-85F3-7BA8BB48F5A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E2D692D-CCBB-4D89-85F3-7BA8BB48F5A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E85A9A03-DF12-44E7-A417-CB3742C56C16} = {D9538699-CF5D-4FA0-BEA1-94C6359ED1ED}
 		{4E2D692D-CCBB-4D89-85F3-7BA8BB48F5A2} = {A4BB1DB9-3F6C-42A9-9FD9-387F40F0498E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6D1CA156-7DA4-4CD1-AC85-278CE525DDAE}
 	EndGlobalSection
 EndGlobal
