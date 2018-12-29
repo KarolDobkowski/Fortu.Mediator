@@ -10,3 +10,6 @@ Flowem\.Mediator\.Tests/bin/
 Flowem\.Mediator\.Tests/obj/
 
 \.vs
+Flowem\.Mediator\.Core/bin/
+
+Flowem\.Mediator\.Core/obj/
