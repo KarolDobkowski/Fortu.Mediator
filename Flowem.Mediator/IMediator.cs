@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace Flowem.Mediator
+namespace Fortu.Mediator
 {
     public interface IMediator
     {

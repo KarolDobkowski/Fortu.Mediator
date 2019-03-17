@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace Flowem.Mediator.Tests.Samples
+namespace Fortu.Mediator.Tests.Samples
 {
     public class NotRegisteredGenericMessageHandler : IMessageHandler<NotRegisteredGenericMessage, int>
     {

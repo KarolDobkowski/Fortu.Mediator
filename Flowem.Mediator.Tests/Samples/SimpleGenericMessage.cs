@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Flowem.Mediator.Tests.Samples
+namespace Fortu.Mediator.Tests.Samples
 {
     public class SimpleGenericMessage : IMessage<SimpleGenericMessageResult>
     {

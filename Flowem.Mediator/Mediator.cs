@@ -1,8 +1,8 @@
 using System;
 using System.Threading.Tasks;
-using Flowem.Mediator.Extensions;
+using Fortu.Mediator.Extensions;
 
-namespace Flowem.Mediator
+namespace Fortu.Mediator
 {
     public class Mediator : IMediator
     {

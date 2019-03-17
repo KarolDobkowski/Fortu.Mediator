@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Flowem.Mediator.Tests.Samples;
+using Fortu.Mediator.Tests.Samples;
 using Microsoft.Extensions.DependencyInjection;
 using Xunit;
 
-namespace Flowem.Mediator.Tests.GenericMessages
+namespace Fortu.Mediator.Tests.GenericMessages
 {
     public class GenericMessagesTests
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Flowem.Mediator.Extensions
+namespace Fortu.Mediator.Extensions
 {
     internal static class MessageExtensions
     {

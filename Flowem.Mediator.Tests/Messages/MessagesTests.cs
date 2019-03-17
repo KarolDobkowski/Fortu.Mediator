@@ -1,10 +1,10 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
-using Flowem.Mediator.Tests.Samples;
+using Fortu.Mediator.Tests.Samples;
 using Microsoft.Extensions.DependencyInjection;
 using Xunit;
 
-namespace Flowem.Mediator.Tests.Messages
+namespace Fortu.Mediator.Tests.Messages
 {
     public class MessagesTests
     {

@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
-using Flowem.Mediator.Tests.Messages;
+using Fortu.Mediator.Tests.Messages;
 
-namespace Flowem.Mediator.Tests.Samples
+namespace Fortu.Mediator.Tests.Samples
 {
     public class SimpleMessageHandler : IMessageHandler<SimpleMessage>
     {

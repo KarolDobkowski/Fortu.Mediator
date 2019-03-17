@@ -7,9 +7,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D9538699-CF5
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{A4BB1DB9-3F6C-42A9-9FD9-387F40F0498E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flowem.Mediator", "Flowem.Mediator\Flowem.Mediator.csproj", "{E85A9A03-DF12-44E7-A417-CB3742C56C16}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fortu.Mediator", "Flowem.Mediator\Fortu.Mediator.csproj", "{E85A9A03-DF12-44E7-A417-CB3742C56C16}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flowem.Mediator.Tests", "Flowem.Mediator.Tests\Flowem.Mediator.Tests.csproj", "{4E2D692D-CCBB-4D89-85F3-7BA8BB48F5A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fortu.Mediator.Tests", "Flowem.Mediator.Tests\Fortu.Mediator.Tests.csproj", "{4E2D692D-CCBB-4D89-85F3-7BA8BB48F5A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

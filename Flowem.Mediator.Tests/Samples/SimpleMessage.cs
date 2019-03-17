@@ -1,4 +1,4 @@
-﻿namespace Flowem.Mediator.Tests.Samples
+﻿namespace Fortu.Mediator.Tests.Samples
 {
     public class SimpleMessage : IMessage
     {

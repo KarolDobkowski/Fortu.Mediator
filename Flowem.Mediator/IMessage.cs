@@ -1,4 +1,4 @@
-namespace Flowem.Mediator
+namespace Fortu.Mediator
 {
     public interface IMessage 
     {
