@@ -4,5 +4,5 @@ build:
  script:
   - 'dotnet restore'
   - 'dotnet build'
-  - 'cd Flowem.Mediator.Tests'
+  - 'cd Fortu.Mediator.Tests'
   - 'dotnet test  --no-build'
