@@ -5,7 +5,7 @@ namespace Fortu.Mediator
         
     }
     
-    public interface IMessage<T>
+    public interface IMessage<out T>
     {
         
     }

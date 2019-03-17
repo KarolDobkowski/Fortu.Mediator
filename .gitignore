@@ -13,3 +13,8 @@ Flowem\.Mediator\.Tests/obj/
 Flowem\.Mediator\.Core/bin/
 
 Flowem\.Mediator\.Core/obj/
+/Fortu.Mediator/bin/Debug/netstandard2.0
+/Fortu.Mediator/obj
+/Fortu.Mediator.Tests/bin/Debug/netcoreapp2.1
+/Fortu.Mediator.Tests/obj
+/Fortu.Mediator.sln.DotSettings.user
