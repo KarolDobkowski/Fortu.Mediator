@@ -1,4 +1,5 @@
-﻿using System.Threading;
+﻿using System;
+using System.Threading;
 using System.Threading.Tasks;
 using Fortu.Mediator.Tests.Samples;
 using Microsoft.Extensions.DependencyInjection;
@@ -18,6 +19,22 @@ namespace Fortu.Mediator.Tests.Messages
             var provider = services.BuildServiceProvider();
 
             _mediator = new Mediator(provider);
+        }
+
+        [Fact]
+        public void ShouldThrowArgumentNullExceptionWhenMessageIsNull()
+        {
+            SimpleMessage message = null;
+
+            Assert.Throws<ArgumentNullException>(() => _mediator.Send(message));
+        }
+
+        [Fact]
+        public void ShouldThrowArgumentNullExceptionWhenHandlerNotRegistered()
+        {
+            var message = new NotRegisteredSimpleMessage();
+
+            Assert.Throws<ArgumentNullException>(() => _mediator.Send(message));
         }
 
         [Fact]

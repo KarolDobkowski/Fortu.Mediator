@@ -1,8 +1,6 @@
 using System;
-using System.Reflection;
 using System.Threading.Tasks;
 using Fortu.Mediator.Extensions;
-using Microsoft.CSharp;
 
 namespace Fortu.Mediator
 {
@@ -21,7 +19,7 @@ namespace Fortu.Mediator
             message.ThrowExceptionIfNull("Message cannot be null.");
 
             var handlerType = typeof(IMessageHandler<>).MakeGenericType(message.GetType());
-            var handler = ((IMessageHandler<TMessage>)_serviceProvider.GetService(handlerType));
+            var handler = (IMessageHandler<TMessage>)_serviceProvider.GetService(handlerType);
             if (handler is null)
                 throw new ArgumentNullException(nameof(handler), "Handler is not registered.");
 
@@ -38,7 +36,7 @@ namespace Fortu.Mediator
 
             var handlerType = handler.GetType();
             var handlerInstance = Activator.CreateInstance(handlerType);
-            var handle = handlerType.GetMethod("Handle") ?? throw new InvalidOperationException();
+            var handle = handlerType.GetMethod("Handle");
             return (Task<TResult>)handle.Invoke(handlerInstance, new object[]{ message });
         }
     }

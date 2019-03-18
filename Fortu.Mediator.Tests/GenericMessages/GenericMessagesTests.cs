@@ -50,6 +50,7 @@ namespace Fortu.Mediator.Tests.GenericMessages
 
             Assert.IsType<SimpleGenericMessageResult>(result);
             Assert.Equal(message.Guid.ToString(), result.Guid);
+            Assert.Equal(348, result.Const);
         }
 
         [Fact]
