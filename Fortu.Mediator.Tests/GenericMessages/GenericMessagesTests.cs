@@ -26,7 +26,7 @@ namespace Fortu.Mediator.Tests.GenericMessages
             SimpleGenericMessage genericMessage = null;
             
             await Assert.ThrowsAsync<ArgumentNullException>(async () =>
-                await _mediator.Dispatch<SimpleGenericMessage, SimpleGenericMessageResult>(genericMessage));
+                await _mediator.Dispatch(genericMessage));
         }
 
         [Fact]
@@ -35,7 +35,7 @@ namespace Fortu.Mediator.Tests.GenericMessages
             var message = new NotRegisteredGenericMessage();
 
             await Assert.ThrowsAsync<ArgumentNullException>(async () =>
-                await _mediator.Dispatch<NotRegisteredGenericMessage, int>(message));
+                await _mediator.Dispatch(message));
         }
 
         [Fact]
@@ -46,7 +46,7 @@ namespace Fortu.Mediator.Tests.GenericMessages
                 Guid = Guid.NewGuid()
             };
 
-            var result = await _mediator.Dispatch<SimpleGenericMessage, SimpleGenericMessageResult>(message);
+            var result = await _mediator.Dispatch(message);
 
             Assert.IsType<SimpleGenericMessageResult>(result);
             Assert.Equal(message.Guid.ToString(), result.Guid);
@@ -57,7 +57,7 @@ namespace Fortu.Mediator.Tests.GenericMessages
         {
             var message = new GenericMessageWithValueTypeResponse();
 
-            var result = await _mediator.Dispatch<GenericMessageWithValueTypeResponse, long>(message);
+            var result = await _mediator.Dispatch(message);
 
             Assert.IsType<long>(result);
             Assert.Equal(123456789987654321, result);
