@@ -33,11 +33,12 @@ namespace Fortu.Mediator
             var handler = _serviceProvider.GetService(typeof(IMessageHandler<,>).MakeGenericType(message.GetType(), typeof(TResult)));
             if (handler is null)
                 throw new ArgumentNullException(nameof(handler), "Handler is not registered.");
+            
+            var handle = handler
+                .GetType()
+                .GetMethod("Handle");
 
-            var handlerType = handler.GetType();
-            var handlerInstance = Activator.CreateInstance(handlerType);
-            var handle = handlerType.GetMethod("Handle");
-            return (Task<TResult>)handle.Invoke(handlerInstance, new object[]{ message });
+            return (Task<TResult>)handle.Invoke(handler, new object[]{ message });
         }
     }
 }

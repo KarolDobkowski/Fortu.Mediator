@@ -15,6 +15,8 @@ namespace Fortu.Mediator.Tests.GenericMessages
             var services = new ServiceCollection();
             services.AddTransient<IMessageHandler<SimpleGenericMessage, SimpleGenericMessageResult>, SimpleGenericMessageHandler>();
             services.AddTransient<IMessageHandler<GenericMessageWithValueTypeResponse, long>, GenericMessageWithValueTypeResponseHandler>();
+            services.AddTransient<IMessageHandler<GenericMessageWithServiceInjected, int>, GenericMessageWithServiceInjectedHandler>();
+            services.AddTransient<ISampleService, SampleService>();
             var provider = services.BuildServiceProvider();
 
             _mediator = new Mediator(provider);
@@ -62,6 +64,17 @@ namespace Fortu.Mediator.Tests.GenericMessages
 
             Assert.IsType<long>(result);
             Assert.Equal(123456789987654321, result);
+        }
+
+        [Fact]
+        public async Task ShouldCorrectlyDispatchHandlerWithParameterInjected()
+        {
+            var message = new GenericMessageWithServiceInjected();
+
+            var result = await _mediator.Dispatch(message);
+
+            Assert.IsType<int>(result);
+            Assert.Equal(10, result);
         }
     }
 }
