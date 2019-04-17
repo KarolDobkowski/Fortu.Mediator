@@ -15,7 +15,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Fortu.Mediator\Fortu.Mediator.csproj" />
+      <ProjectReference Include="..\..\src\Fortu.Mediator\Fortu.Mediator.csproj" />
     </ItemGroup>
 
 </Project>

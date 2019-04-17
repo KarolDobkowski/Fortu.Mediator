@@ -1,20 +1,8 @@
-
-Flowem\.Mediator/bin/
-
-Flowem\.Mediator/obj/
-
 \.idea/
-
-Flowem\.Mediator\.Tests/bin/
-
-Flowem\.Mediator\.Tests/obj/
-
 \.vs
-Flowem\.Mediator\.Core/bin/
 
-Flowem\.Mediator\.Core/obj/
-/Fortu.Mediator/bin/Debug/netstandard2.0
-/Fortu.Mediator/obj
-/Fortu.Mediator.Tests/bin/Debug/netcoreapp2.1
-/Fortu.Mediator.Tests/obj
+/src/Fortu.Mediator/bin
+/src/Fortu.Mediator/obj
+/test/Fortu.Mediator.Tests/bin
+/test/Fortu.Mediator.Tests/obj
 /Fortu.Mediator.sln.DotSettings.user
